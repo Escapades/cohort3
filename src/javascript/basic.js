@@ -31,6 +31,6 @@ function size(){
 // Add the event listeners
 // 
 
-idNumber.addEventListener('change', (() => {
-    idNumberSize.textContent = functions.size(idNumber.value);
+   idNumber.addEventListener('change', (() => {
+   idNumberSize.textContent = functions.size(idNumber.value);
 }));
