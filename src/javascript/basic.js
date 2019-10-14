@@ -5,8 +5,7 @@ console.log("Hello World from basic.js");
 function onButtonClicked(){
   console.log("I am in the button clicked event");
 
-  let a =
-  ￼document.getElementById("userinput").value;
+  let a = document.getElementById("userinput").value;
 
   let b = parseInt(a) + 1;
 
@@ -25,8 +24,6 @@ function size(){
   document.getElementById("button2").innerHTML=num;
 
 }
-
-
 
 
 // **********

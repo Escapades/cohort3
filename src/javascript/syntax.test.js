@@ -1,18 +1,21 @@
 import functions from './syntax'
 
-// (1) write a stub
-// (2) write a test that fails by setting the parameter in function.js to -500
-// if (num < -500) return "ToPassEventually"; 
+
+
 
 test('Check the sizes', () => {
 
-    // Added the following statement
-    expect(functions.size(-101)).toBe("extra large");
-    //******************************************** cl
+    // (1) write a stub
+    // (2) write a test that fails by setting a parameter to fail
+    // (3) comment out the failing test and write the code to pass
+    //  expect(functions.size(-101)).toBe("");
 
-    // Write a function for a dummy result
-    // expect(functions.size(1)).toBe("zero");
-    //************************************************
+    // (4) write the code that will now pass and run the test
+    expect(functions.size(-101)).toBe("Pass");
+
+    // (5) repeat 
+    expect(functions.size(-101)).toBe("Pass");
+    //*********************************************
 
     expect(functions.size(-1)).toBe("small"); // Consider the edge cases
     expect(functions.size(0)).toBe("small");
@@ -23,9 +26,6 @@ test('Check the sizes', () => {
 });
 
 test('Does that add function work?', () => {
-    expect(functions.add(1, 2)).toBe(3);
-    expect(functions.add(101, 202)).toBe(303);
-});
-//test('Check the sizes', () => {
-//   console.log("Hello World");
-//});
+    expect(functions.add(1,2)).toBe(3);
+    expect(functions.add(101,202)).toBe(303);
+ });    
