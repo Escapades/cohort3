@@ -2,6 +2,7 @@ import functions from './daily.js'
 
 test('Test the assertEquals', () => {
    
+    
     expect(functions.assertEquals("a","b")).toBe(false);
     expect(functions.assertEquals("a","a")).toBe(true);
     expect(functions.assertEquals(1,2)).toBe(false);
@@ -37,3 +38,20 @@ test('Test the assertEquals', () => {
 // assertEquals(2,2);
 // assertEquals("2",2);
 // assertEquals("This value","This value");
+
+
+/*
+    Write a function to format an email based on an array.
+*/
+
+test('email builder from an array', () => {
+    const name = ["first", "last"];
+    expect(functions.makeEmailArr(name))
+        .toEqual("first.last@evolveu.ca");
+    expect(functions.makeEmailArr(["First", "Last"]))
+        .toEqual("first.last@evolveu.ca");
+    expect(functions.makeEmailArr(["Bill", "Smith"]))
+        .toEqual("bill.smith@evolveu.ca");
+});
+
+
