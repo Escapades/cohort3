@@ -1,7 +1,16 @@
-import functions from './daily'
-//test('just playing--------------', () => {
-  //  expect("extra large").toBe("extra large");
-//});
+import functions from './daily.js'
+
+test('Test the assertEquals', () => {
+   
+    expect(functions.assertEquals("a","b")).toBe(false);
+    expect(functions.assertEquals("a","a")).toBe(true);
+    expect(functions.assertEquals(1,2)).toBe(false);
+    expect(functions.assertEquals(2,2)).toBe(true);
+    expect(functions.assertEquals("2",2)).toBe(false);
+    expect(functions.assertEquals("This value","This value")).toBe(true);
+
+});
+
 
 /*	
 	Write the function that will create this output:
@@ -22,9 +31,9 @@ import functions from './daily'
 
 // and before this comment ---
 
-assertEquals("a","b");
-assertEquals("a","a");
-assertEquals(1,2);
-assertEquals(2,2);
-assertEquals("2",2);
-assertEquals("This value","This value");
+// assertEquals("a","b");
+// assertEquals("a","a");
+// assertEquals(1,2);
+// assertEquals(2,2);
+// assertEquals("2",2);
+// assertEquals("This value","This value");

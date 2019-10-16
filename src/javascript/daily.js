@@ -1,31 +1,46 @@
+
 const functions = {
-    
-    size: (num) => {
+     
+    assertEquals: (num1, num2) => {
+        if (num1===num2) {
+            return true;
+        }
+
+         else if (num1 !== num2)
+        {
         
-        
-        if (num < -100) return "Pass";
-        
-       // if (num < 0) return "zero";
-
-        if (num < 10) return "small";
-        if (num < 20) return "medium";
-        return "large";
-    },
-
-    add: (num1, num2) => {
-        return num1 + num2;
-    },
-
-
-    subtract: (num1, num2) => {
-        return num1 - num2;
+        console.log("the two values are not the same:");
+        console.log("p1-->",num1);
+        console.log("p2-->",num2);
+        return false;
+         }
     }
 
-    
 };
-
 export default functions;
 
-test('Check the sizes', () => {
-    console.log("The  two tests passed ...");
-});
+/*	
+	Write the function that will create this output:
+
+*** the two values are not the same:
+    p1--> a
+    p2--> b
+*** the two values are not the same:
+    p1--> 1
+    p2--> 2
+*** the two values are not the same:
+    p1--> 2
+    p2--> 2
+*/
+
+// Write the function after this comment ---
+
+
+// and before this comment ---
+
+// assertEquals("a","b");
+// assertEquals("a","a");
+// assertEquals(1,2);
+// assertEquals(2,2);
+// assertEquals("2",2);
+// assertEquals("This value","This value");
