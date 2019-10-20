@@ -23,7 +23,6 @@ const functions = {
 
     
 };
-
 export default functions;
 
 test('Check the sizes', () => {
