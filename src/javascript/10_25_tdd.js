@@ -5,8 +5,8 @@ const functions = {
 
   sum: (a, b) => {
     //return 0;
-    return 0;
-    //return a + b;
+    //return 3;
+    return a + b;
   }
 };
 // Create the a function with hello world from 10_25_tdd.js

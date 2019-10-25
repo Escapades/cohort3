@@ -12,7 +12,7 @@
 //(9) refactor
 
 import functions from "./10_25_tdd.js";
-
+//return 0;
 //console logs below are the plumbing
 test('just playing--------------', () => {
     console.log("Hello World from 10_25_tdd.js");
@@ -21,6 +21,7 @@ test('just playing--------------', () => {
     // this is my first fail
     //  expect(received).toBe(expected) Object.is equality
     expect(functions.sum(1,2)).toBe(3);
+    expect(functions.sum(1,2)).toBe(5);
 });
 
 
