@@ -1,176 +1,153 @@
-//if (4 + 3 === 7){
-	//alert("You're smart!");
-	//console.log("Helloooo", "How are you");
-//console.log("Helloooo");
+//EXERCISE1.txt
+//****************
 
-//function sayHello(){
-	//console.log("Hello");
-//}
+5 + "4"
+// "54"
 
-//sayHello();
+5 - "3"
+ // 2
 
-//var sayBye = function() {
-	//console.log("Bye");
-//}
+10 % 5 
+// 0
 
-//sayBye();
+5 % 10
+ // 5
 
-//function sing(song) {
-	//console.log(song);
-//}
+"Java" + "Coffee"
+ // "JavaCoffee"
 
-//sing ("Laaa deee daaa");
-//sing ("helllloooooo");
-//sing (" backstreets back alright");
+" " + " " 
+//  "  "
 
-// function multiply(a, b){
-// 	if (a > 10 || b > 10) {
-// 		return "that's too hard";
-// 	} else {
-// 		return a*b;
-// 	}
-// }
+" " + 0
+ //  " 0"
 
-// function multiply(a,b)
-// {
-// 	return a*b;
-// }
-// alert(multiply(5,10));
+true + true 
+// 2
 
-// var age = prompt("What is your age?");
+true + false 
+// 1
 
-// if (Number(age) < 18) {
-// 	alert("Sorry, you are too yound to drive this car. Powering off");
-// } else if (Number(age) > 18) {
-// 	alert("Powering On. Enjoy the ride!");
-// } else if (Number(age) === 18) {
-// 	alert("Congratulations on your first year of driving. Enjoy the ride!");
-// }
+false + true 
+//  1
 
-//prompt("What is your age?");
+false - true 
+//  -1
 
-// function checkDriverAge() {
-// var age = prompt("What is your age?");
-// 	if (Number(age) < 18) {
-//  	alert("Sorry, you are too young to drive this car. Powering off");
-//  } else if (Number(age) > 18) {
-//  	alert("Powering On. Enjoy the ride!");
-//  } else if (Number(age) === 18) {
-//  	alert("Congratulations on your first year of driving. Enjoy the ride!");
-//  }
-// }
-// checkDriverAge();
+3 - 4 //
+  -1
 
-// checkDriverAge2()
-// var checkDriverAge2 = function() {
-// 	var age = prompt("What is your age?");
-// 	if (Number(age) < 18) {
-// 		alert("Sorry, you are too yound to drive this car. Powering off");
-// 	} else if (Number(age) > 18) {
-// 		alert("Powering On. Enjoy the ride!");
-// 	} else if (Number(age) === 18) {
-// 		alert("Congratulations on your first year of driving. Enjoy the ride!");
-// 	}
-// }
-// checkDriverAge2();
+"Bob" - "bill" 
+// NAN
 
+5 >= 1 
+// true
 
-// var list =[["tiger", "cat", "bear", "bird"]];
-// console.log(list[0][2]);
-//concat, push, shift, pop, sort, my List, myNewList
+0 === 1 
+//  false
 
-//var array = ["Banana", "Apples", "Oranges", "Blueberries"];
-//console.log(array[0][2]);
-// array.shift();
-// //array.sort();
-// // 1. Remove the Banana from the array.
-// array.shift();
+4 <= 1 
+//  false
 
-// // 2. Sort the array in order. 
-// array.sort();
+1 != 1 
+//  false
 
-// // 3. Put "Kiwi" at the end of the array.
-// array.push("Kiwi");
+"A" > "B" 
+//  false
 
-// // 4. Remove "Apples" from the array.
-// array.splice(0, 1);
+"B" < "C" 
+//  true
 
-// // 5. Sort the array in reverse order. 
-// array.reverse();
+"a" > "A" 
+//  true
 
-// // using this array, 
-// var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
-// access "Oranges".
-//array2[1][1][0];
+"b" < "A" 
+//  false
 
+true === false 
+//  false
 
-// var user = {
-// 	name: "John",
-// 	age: 34,
-// 	hobby: "Soccer",
-// 	isMarried: false,
-// 	spells: ["abrakadra","shazam","boo"]
-// };
+true != true 
+// false
 
-// var list = [
-// {
-// 	username: "andy",
-// 	password: "secret"
-// },
-// {
-// 	username: "jess",
-// 	password: "123"
-// }
+//EXERCISE2.txt
+//****************
 
-// ];
+// add variable "firstName" and "lastName" // so that they equal your name
+var firstName = "George";
+var lastName = "Fitzgerald";
 
-var todos = [
-    "clean room",
-    "brush teeth",
-    "exercise",
-    "study javascript",
-    "eat healthy"
-];
+// create a variable that holds the answer // of "firstName" + " " + "LastName"
+var fullName = firstName + " " + lastName;
+// "George Fitzgerald"
 
-var todosImportant = [
-    "clean room!",
-    "brush teeth!",
-    "exercise!",
-    "study javascript!",
-    "eat healthy!"
-];
+// Evaluate this question. What is a + b?
+var a = 34;
+var b = 21;
+a = 7;
+b + a // 28
 
-var todosLength = todos.length;
+// What is c equal to?
+var c; // undefined
 
-function logTodos(todo,i) {
-	console.log(todo,i);
+//EXERCISE3.txt
+//****************
+
+// Make a Calculator! using prompt(), and variables, make a program that does the following:
+// 1. Prompts the user for first number.
+// 2. Stores that first number
+// 3. Prompts the user for the second number.
+// 4. stores that number and responds with the SUM by using an alert.  
+
+var a = Number (prompt("Please provide the first number"));
+var b = Number (prompt("Please provide the second number"));
+
+function addition(a,b)
+{
+	console.log(a,b);
+	return ("Sum = " + (a+b));
 }
 
-todos.forEach(logTodos);
-todosImportant.forEach(logTodos);
+alert(addition(a,b));
 
-// for (var i=0; i < todosLength; i++) {
-//     //console.log(todos[i] + "!");
-//     //todos[i] = todos[i] + "!";
-//     todos.pop();
-// }
+// EXERCISE4.txt
+//****************
 
-//todos[i] = todos[i] + "!";
+// Make a function called checkDriverAge(). Whenever you call this function, you will get prompted for age. Use Function
+// Declaration to create this function.
 
-// todos.length
-// 5
-// "helllooo".length
-// 8
+var age = prompt("What is your age?");
+function checkDriverAge() {
 
-// var counterOne = 10;
-// while (counterOne > 0) {
-// 	console.log(counterOne);
-// 	counterOne--;
-// }
+if (Number(age) < 18) {
+	alert("Sorry, you are too young to drive this car. Powering off");
+} else if (Number(age) > 18) {
+	alert("Powering On. Enjoy the ride!");
+	} else if (Number(age) === 18) {
+	alert("Congratulations on your first year of driving. Enjoy the ride!");
+	}
+}
+	checkDriverAge();
 
-// var counterTwo = 10
-// do {
-// 	console.log(counterTwo);
-// 	counterTwo--;
-// }while (counterTwo > 0);
+// Create another function that does the same thing, assign it to checkDriverAge2 variable using Function Expression.
 
+function checkDriverAge2() {
+var age = prompt("What is your age?");
+
+if (Number(age) < 18) {
+	alert("Sorry, you are too young to drive this car. Powering off");
+} else if (Number(age) > 18) {
+	alert("Powering On. Enjoy the ride!");
+} else if (Number(age) === 18) {
+	alert("Congratulations on your first year of driving. Enjoy the ride!");
+}
+}
+checkDriverAge2();
+
+// EXERCISE4.txt BONUS: Instead of using the prompt. Now, only use console.log and make the checkDriverAge() function 
+// accept an argument of age, so that if you enter: checkDriverAge(92); it returns "Powering On. Enjoy the ride!"
+
+//if (Number(age) === 92) {
+ 	//console.log(age);
+//return ("Powering On. Enjoy the ridesssss !" );
+  //   }
