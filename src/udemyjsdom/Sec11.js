@@ -185,3 +185,68 @@ array.reverse();
 // var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 // access "Oranges".
 array2[1][1][0];
+
+// // EXERCISE 7 
+// // ***********
+// // Create an object and an array which we will use in our facebook exercise. 
+
+// // 1. Create an object that has properties "username" and "password". Fill those values in with strings.
+// {
+// 	username: "andrei",
+// 	password: "supersecret"
+// }
+
+// // 2. Create an array which contains the object you have made above and name the arry "database"
+// var database = [
+// 	{
+// 		username: "andrei",
+// 		password: "supersecret"
+// 	}
+// ];
+
+// // 3. Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
+// var newsfeed = [
+// 	{
+// 		username: "Bobby",
+// 		timeline: "So tired from all that learning!"
+// 	},
+// 	{
+// 		username: "Sally",
+// 		timeline: "Javascript is sooooo cool!"
+// 	},
+// 	{
+// 		username: "Mitch",
+// 		timeline: "Javascript is preeetyy cool!"
+// 	}
+// ];
+
+// DOM Selector
+// *************
+
+// getElementsByTagName
+// getElementsByClassName
+// getElementById
+
+// querySelector
+// querySelectorAll
+
+// getAttribute
+// setAttribute
+
+// ##Changing Styles
+// style.{property} //ok
+
+// className //best
+// classList //best
+
+// classList.add
+// classList.remove
+// classList.toggle
+
+// ##Bonus
+// innerHTML //DANGEROUS
+
+// parentElement
+// children
+
+// ##It is important to CACHE selectors in variables
