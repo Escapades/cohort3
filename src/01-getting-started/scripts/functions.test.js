@@ -24,9 +24,6 @@ test('Does that add function work?', () => {
 });
 
 
-
-import functions from "./10_25_tdd.js";
-//return 0;
 //console logs below are the plumbing
 test('just playing--------------', () => {
     console.log("Hello World from 10_25_tdd.js");
