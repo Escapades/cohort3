@@ -1,5 +1,6 @@
 import functions from "./functions.js";
 
+
 // **********
 //
 // Add the event listeners
@@ -41,3 +42,8 @@ idDiv.addEventListener("click", () => {
   let userinput2 = parseInt(idNum2.value);
   idAnswer.value = functions.div(userinput1, userinput2);
 });
+
+idTax.addEventListener('click', (() => {
+  let userinput3 = parseInt(idGross.value);
+  idGross.value = "$" + functions.tax(userinput3);
+}));
