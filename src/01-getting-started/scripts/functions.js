@@ -38,8 +38,26 @@ const functions = {
         if (num <= 147667) return ((num - 95259) * 0.26) + 16908;
         if (num <= 210371) return ((num - 147667) * 0.29) + 30535;
         return ((num - 210371) * 0.33) + 48719;
-    }
+    },
 
+
+  addElement: (arr, ele) => {
+        arr.push(ele);
+        return arr;
+    },
+    totalArr: (arr) => {
+        let total = 0;
+        let x;
+        for (x of arr) {
+            total += Number(x);
+        }
+        return total;
+    },
+
+    clearArr: (arr) => {
+        arr.length = 0;
+        return arr;
+    }
 
 };
 

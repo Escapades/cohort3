@@ -47,3 +47,28 @@ idTax.addEventListener('click', (() => {
   let userinput3 = parseInt(idGross.value);
   idGross.value = "$" + functions.tax(userinput3);
 }));
+
+/*Working with Arrays*/
+let currentArray = [];
+
+idadd.addEventListener('click', (() => {
+    if (isNaN(idElementInput.value) || idElementInput.value ==="") {
+        idMessageArea.textContent = "Please enter a valid number";
+    } else {
+        functions.addElement(currentArray, idElementInput.value);
+        idMessageArea.textContent = idElementInput.value + " Has been added to the array";
+    }
+}));
+
+idshow.addEventListener('click', (() => {
+  idMessageArea.textContent = "Array state: " + currentArray.toString();
+}));
+
+idtotal.addEventListener('click', (() => {
+  idMessageArea.textContent = "Total: " + functions.totalArr(currentArray);
+}));
+
+idclear.addEventListener('click', (() => {
+  functions.clearArr(currentArray);
+  idMessageArea.textContent = "Array Cleared"
+}));
