@@ -10,7 +10,7 @@ idNumber.addEventListener("change", () => {
   idNumberSize.textContent = functions.size(idNumber.value);
 });
 
-idDoIt.addEventListener("click", () => {
+idAdd.addEventListener("click", () => {
   let userinput1 = parseInt(idNum1.value);
   let userinput2 = parseInt(idNum2.value);
   idAnswer.value = functions.add(userinput1, userinput2);
