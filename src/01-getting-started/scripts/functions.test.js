@@ -40,6 +40,26 @@ test('Does the clearArr function work?', () => {
     expect(functions.clearArr(["1", "2", "3"])).toStrictEqual([]);
 });
 
+test('Does the lookUp function work?', () => {
+    let dict = {
+        ab: "Alberta",
+        bc: "British Columbia",
+        mb: "Manitoba",
+        nb: "New Brunswick",
+        nl: "Newfoundland and Labrador",
+        ns: "Nova Scotia",
+        nt: "Northwest Territories",
+        nu: "Nunavut",
+        on: "Ontario",
+        pe: "Prince Edward Island",
+        qc: "Quebec",
+        sk: "Saskatchewan",
+        yt: "Yukon",
+    }
+    expect(functions.lookUp("ab")).toBe("Alberta");
+    expect(functions.lookUp("")).toBe(undefined);
+});
+
 // test('Does the tax function work?', () => {
 //     expect(functions.tax(-100)).toBe(0);
 //     expect(functions.tax(1.00)).toBe(0.15);

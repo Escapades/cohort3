@@ -72,3 +72,10 @@ idclear.addEventListener('click', (() => {
   functions.clearArr(currentArray);
   idMessageArea.textContent = "Array Cleared"
 }));
+
+
+/*Working with Dictionaries*/
+idSearch.addEventListener('click', (() => {
+  console.log(functions.lookUp(idProvCode.value));
+  idMessageDict.textContent = functions.lookUp(idProvCode.value);
+}));
