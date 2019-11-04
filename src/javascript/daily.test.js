@@ -1,20 +1,20 @@
 import functions from "./daily.js";
 
-/*	
-	Write the function that will create this output:
+// /*	
+// 	Write the function that will create this output:
 
-*** the two values are not the same:
-    p1--> a
-    p2--> b
-*** the two values are not the same:
-    p1--> 1
-    p2--> 2
-*** the two values are not the same:
-    p1--> 2
-    p2--> 2
-*/
+// *** the two values are not the same:
+//     p1--> a
+//     p2--> b
+// *** the two values are not the same:
+//     p1--> 1
+//     p2--> 2
+// *** the two values are not the same:
+//     p1--> 2
+//     p2--> 2
+// */
 
-test("Test the assertEquals", () => {
+  test("Test the assertEquals", () => {
   expect(functions.assertEquals("a", "b")).toBe(false);
   expect(functions.assertEquals("a", "a")).toBe(true);
   expect(functions.assertEquals(1, 2)).toBe(false);
@@ -27,7 +27,7 @@ test("Test the assertEquals", () => {
     Write a function to format an email based on an array.
 */
 
-test("email builder from an array", () => {
+  test("email builder from an array", () => {
   const name = ["first", "last"];
   expect(functions.makeEmailArr(name)).toEqual("first.last@evolveu.ca");
   expect(functions.makeEmailArr(["First", "Last"])).toEqual(
@@ -36,6 +36,18 @@ test("email builder from an array", () => {
   expect(functions.makeEmailArr(["Bill", "Smith"])).toEqual(
     "bill.smith@evolveu.ca"
   );
+});
+
+/* Write a function to format an email based on an object */
+
+test('email builder from an object / map', () => {
+  const name = { fname: 'first', lname: 'last' };
+  expect(functions.makeEmailObj(name))
+      .toEqual("first.last@evolveu.ca");
+  expect(functions.makeEmailObj({ fname: 'First', lname: 'Last' }))
+      .toEqual("first.last@evolveu.ca");
+  expect(functions.makeEmailObj({ fname: "Bill", lname: "Smith" }))
+      .toEqual("bill.smith@evolveu.ca");
 });
 
 // THE FOLLOWING ARE EXAMPLES ON LOOPS
@@ -70,9 +82,17 @@ for (var i in thirdArray) {
 }
 
 //EXAMPLE: FOR OF LOOP - Prepare for Array Work - October 15, 2019
-for (var i of thirdArray) {
-  console.log(i); // logs 3, 5, 7
+// for (var i of thirdArray) {var thirdArray = [3, 5, 7];var thirdArray = [3, 5, 7];
+thirdArray.jaws = "test";
+for (var i in thirdArray) {
+  console.log(i); // logs 0, 1, 2, "jaws"
 }
+thirdArray.jaws = "test";
+for (var i in thirdArray) {
+  console.log(i); // logs 0, 1, 2, "jaws"
+}
+//   console.log(i); // logs 3, 5, 7
+// }
 
 //THE FOLLOWING ARE MORE EXAMPLES ON ARRAYS 
 //EXAMPLE: MORE ARRAY WORK - Daily Exercises - Oct 16 - 17
@@ -155,3 +175,70 @@ var totalJediScore = personnel
   array1.sort();
   console.log(array1);
   // expected output: Array [100, 10000, 31, 4, 60]
+
+  // loopStaff - October 22, 2019
+  // from Daily Cohort 3 Exercises
+
+  const data = {
+    staff: [
+        { fname: "Jane", lname: "Smith", balance: 10 },
+        { fname: "Liam", lname: "Henry", balance: 1000 },
+        { fname: "Emma", lname: "Jones", balance: 1330 },
+        { fname: "Olivia", lname: "Notly", balance: 310 },
+        { fname: "Noah", lname: "Ho", balance: 503 },
+        { fname: "William", lname: "Lee", balance: 520 },
+        { fname: "Benjamin", lname: "Amis", balance: 150 },
+    ],
+    company: "EvolveU",
+    city: "Calgary",
+    prov: "Alberta"
+};
+
+//  loopStaff: in / of - October 24, 2019
+// Do the same assignment as the last one using the two forms of the “for” statement.
+//  Create your own tests but use the function names that are provided below.
+
+
+test('For in loop staff email builder for company', () => {
+  const staffEmail = functions.loopStaffIn(data.staff);
+  expect(staffEmail[0])
+      .toEqual("jane.smith@evolveu.ca");
+  expect(staffEmail[3])
+      .toEqual("olivia.notly@evolveu.ca");
+  expect(staffEmail[6])
+      .toEqual("benjamin.amis@evolveu.ca");
+      console.log(staffEmail);
+});
+
+test('For of loop Staff Email for company', () => {
+  const ofStaffEmail = functions.loopStaffOf(data.staff);
+  expect(ofStaffEmail[0])
+      .toEqual("jane.smith@evolveu.ca");
+  expect(ofStaffEmail[3])
+      .toEqual("olivia.notly@evolveu.ca");
+  expect(ofStaffEmail[6])
+      .toEqual("benjamin.amis@evolveu.ca");
+      console.log(ofStaffEmail);
+});
+
+// loopStaff each / map - October 25, 2019
+
+test('For each email builder for company', () => {
+  const eachStaffEmail = functions.loopStaffForEach(data.staff);
+  expect(eachStaffEmail[0])
+      .toEqual("jane.smith@evolveu.ca");
+  expect(eachStaffEmail[3])
+      .toEqual("olivia.notly@evolveu.ca");
+  expect(eachStaffEmail[6])
+      .toEqual("benjamin.amis@evolveu.ca");
+});
+
+test('Map email builder for company', () => {
+  const mapStaffEmail = functions.loopStaffMap(data.staff);
+  expect(mapStaffEmail[0])
+      .toEqual("jane.smith@evolveu.ca");
+  expect(mapStaffEmail[3])
+      .toEqual("olivia.notly@evolveu.ca");
+  expect(mapStaffEmail[6])
+      .toEqual("benjamin.amis@evolveu.ca");
+});
