@@ -242,3 +242,68 @@ test('Map email builder for company', () => {
   expect(mapStaffEmail[6])
       .toEqual("benjamin.amis@evolveu.ca");
 });
+
+
+// More Array Exercises - October 29, 2019
+
+// Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
+
+// write a function to receive the same array (staff) and return the total of balances
+// write a function to receive the same array (staff) and return the average the balances
+
+// Understand the documentation. Now that we have a few arrays, let’s practice using the following:
+
+// The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+var words = ['dog', 'elephant', 'elite', 'hippo', 'tarantula', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["elephant", "tarantula", "present"]
+
+
+// The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+var arrayt1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map2 = arrayt1.map(x => x * 2);
+
+console.log(map2);
+// expected output: Array [2, 8, 18, 32]
+
+
+// The sort() method sorts the elements of an array in place and returns the sorted array. 
+// The default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+// The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
+var months = ['March', 'Jan', 'Feb', 'Dec'];
+months.sort();
+console.log(months);
+// expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+var arrayt1 = [1, 30, 4, 21, 100000];
+arrayt1.sort();
+console.log(arrayt1);
+// expected output: Array [1, 100000, 21, 30, 4]
+
+// The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+const arrayj1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(arrayj1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(arrayj1.reduce(reducer, 5));
+// expected output: 15
+
+
+
+
+
+
+
+
+
+
+

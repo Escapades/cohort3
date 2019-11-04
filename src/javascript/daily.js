@@ -74,5 +74,14 @@ makeEmailObj: (obj) => {
 };
 export default functions;
 
+// More Array Exercises - October 29, 2019
+
+// Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
+
+// write a function to receive the same array (staff) and return the total of balances
+// write a function to receive the same array (staff) and return the average the balances
+
+// Understand the documentation. Now that we have a few arrays, let’s practice using the following:
+
 
  
