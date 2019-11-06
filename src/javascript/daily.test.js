@@ -1,5 +1,39 @@
 import functions from "./daily.js";
 
+// Daily Exercises More Array Exercises (Really) - November 6, 2019
+// *********************************
+// loopStaff - October 22, 2019
+// from Daily Cohort 3 Exercises
+
+const data = {
+  staff: [
+    { fname: "Jane", lname: "Smith", balance: 10 },
+    { fname: "Liam", lname: "Henry", balance: 1000 },
+    { fname: "Emma", lname: "Jones", balance: 1330 },
+    { fname: "Olivia", lname: "Notly", balance: 310 },
+    { fname: "Noah", lname: "Ho", balance: 503 },
+    { fname: "William", lname: "Lee", balance: 520 },
+    { fname: "Benjamin", lname: "Amis", balance: 150 }
+  ],
+  company: "EvolveU",
+  city: "Calgary",
+  prov: "Alberta"
+};
+
+test("return balances >= 1000", () => {
+  expect(functions.balanceAbove(data.staff)).toEqual([1000, 1330]);
+});
+
+//*********************************************************** */
+
+// var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(word => word.length > 6);
+
+// console.log(result);
+
+// expected output: Array ["exuberant", "destruction", "present"]
+
 // /*
 // 	Write the function that will create this output:
 
@@ -176,24 +210,6 @@ var array1 = [100, 60, 4, 31, 10000];
 array1.sort();
 console.log(array1);
 // expected output: Array [100, 10000, 31, 4, 60]
-
-// loopStaff - October 22, 2019
-// from Daily Cohort 3 Exercises
-
-const data = {
-  staff: [
-    { fname: "Jane", lname: "Smith", balance: 10 },
-    { fname: "Liam", lname: "Henry", balance: 1000 },
-    { fname: "Emma", lname: "Jones", balance: 1330 },
-    { fname: "Olivia", lname: "Notly", balance: 310 },
-    { fname: "Noah", lname: "Ho", balance: 503 },
-    { fname: "William", lname: "Lee", balance: 520 },
-    { fname: "Benjamin", lname: "Amis", balance: 150 }
-  ],
-  company: "EvolveU",
-  city: "Calgary",
-  prov: "Alberta"
-};
 
 //  loopStaff: in / of - October 24, 2019
 // Do the same assignment as the last one using the two forms of the “for” statement.

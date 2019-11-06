@@ -1,4 +1,14 @@
 const functions = {
+  balanceAbove: arr => {
+    let newArr = [];
+    arr.forEach(person => {
+      newArr.push(person.balance);
+    });
+    let consoleArr = newArr.filter(balance => balance >= 1000);
+    console.log("This is the >=1000 Totals", consoleArr);
+    return newArr.filter(balance => balance >= 1000);
+  },
+
   assertEquals: (num1, num2) => {
     if (num1 === num2) {
       return true;
