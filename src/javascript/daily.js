@@ -1,3 +1,7 @@
+// More Array Exercises (Really) - November 6, 2019
+// Using one of the callback functions we researched in the last exercise (but may have not used previously) create a new array for 
+// balances >= 1000 from the staff data. 
+
 const functions = {
   balanceAbove: arr => {
     let newArr = [];
