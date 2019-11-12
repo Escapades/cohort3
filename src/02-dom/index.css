@@ -2,7 +2,7 @@ body {
     background-color: rgb(234, 240, 255);
 }
 
-#idContainer {
+#containerId {
     border: 5px solid black;
     width: 225px;
     padding: 20px;
