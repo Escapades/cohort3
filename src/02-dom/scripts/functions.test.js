@@ -6,11 +6,14 @@ import functions from './functions.js';
 // });
 
 
-
+//readfilesync (i.e. fs) is synchronous and blocks execution until finished
 const fs = require('fs');
 const path = require('path');
+//../index.html moves back one directory
+// utf8 refers to unicode and required of the command
 const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
 
+//don'tMock indicates that the module should never return a mocked version of the specified module
 jest.dontMock('fs');
 
 
