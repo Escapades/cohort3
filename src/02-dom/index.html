@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
     <title>DOM Exercise</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Basic DOM Section -->
     <div id="containerId">
-        <h1>Basic DOM</h1>
-        <ol id="idList">This is a list of stuff
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ol>
+      <h1>Basic DOM</h1>
+      <ol id="idList">
+        This is a list of stuff
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
 
-        <input id="idShow" class="clColor1" type="button" value="Show">
-        <input id="idAdd" class="clColor2" type="button" value="Add">
+      <input id="idShow" class="clColor1" type="button" value="Show" />
+      <input id="idAdd" class="clColor2" type="button" value="Add" />
     </div>
-
 
     <!-- Cards Section -->
     <h1>Working with Cards</h1>
     <div class="grid-container">
-        <!-- Button Panel -->
-        <div class="panel left-panel" id="idLeftPanel">
-
-            <input id="idAddCard" class="clColor3" type="button" value="Add Card">
-            
+      <!-- Button Panel -->
+      <div class="panel left-panel" id="idPanelOnLeft">
+        <input id="idAddCard" class="clColor3" type="button" value="Add Card" />
+        <div class="card">
+          Card 1<br /><br />
+          <input
+            id="idInsertBefore"
+            class="clColor4"
+            type="button"
+            value="Insert Before"
+          />
+          <input
+            id="idAddAfter"
+            class="clColor5"
+            type="button"
+            value="Insert After"
+          /><br />
+          <input id="idDelete" class="clColor6" type="button" value="Delete" />
         </div>
+      </div>
 
+      <!-- Other Panels -->
+      <div class="panel right-panel" id="idPanelOneRight">
+        <h1>Right Side Panel One</h1>
+      </div>
+      <div class="panel right-panel" id="idPanelOneRight"></div>
+      <div class="panel right-panel" id="idPanelTwoRight">
+        <h1>Right Side Panel Two</h1>
+      </div>
+    </div>
 
-
-
-
+    
     <script type="module" src="./scripts/main.js"></script>
-</body>
-
+  </body>
 </html>

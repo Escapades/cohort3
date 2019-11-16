@@ -1,54 +1,65 @@
 body {
-    background-color: rgb(234, 240, 255);
+  background-color: rgb(234, 240, 255);
 }
 
 #containerId {
-    border: 5px solid black;
-    width: 225px;
-    padding: 20px;
-    margin: auto;
+  border: 5px solid black;
+  width: 225px;
+  padding: 20px;
+  margin: auto;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 15px 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px 150px;
 }
 
 .panel {
-    background-color: white;
-    height: 500px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
-    overflow: auto;
+  background-color: white;
+  height: 500px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
 }
 
 /* .right-panel {
     height: 350px;
 } */
 
-
 .card {
-    background-color: rgb(234, 223, 247);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: rgb(234, 223, 247);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .card > * {
-    margin: 15px 3px 5px 3px;
+  margin: 15px 3px 5px 3px;
 }
 
 .clColor1 {
-    background-color: rgb(238, 255, 0);
+  background-color: rgb(238, 255, 0);
 }
 
 .clColor2 {
-    background-color: rgb(0, 247, 255);
+  background-color: rgb(0, 247, 255);
 }
 
 .clColor3 {
-    background-color: rgb(0, 247, 255);
+  background-color: rgb(0, 247, 255);
+}
+
+.clColor4 {
+  background-color: rgb(208, 255, 0);
+}
+
+.clColor5 {
+  background-color: rgb(217, 255, 0);
+}
+
+.clColor6 {
+  background-color: rgb(0, 247, 255);
 }
