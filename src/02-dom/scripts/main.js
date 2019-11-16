@@ -13,3 +13,22 @@ containerId.addEventListener("click", (event) => {
         } 
 });
 
+idPanelOnLeft.addEventListener('click', (event) => {
+  console.log(event)
+  if (event.target.id === "idAddCard") {
+      functions.appendCardElement();
+  }
+/********************************************************************************************************************* */
+
+   if (event.target.textContent === "Insert Before") {
+       functions.addCardBefore(event.target.parentNode);
+   }
+
+   if (event.target.textContent === "Insert After") {
+       functions.addCardAfter(event.target.parentNode);
+   }
+
+   if (event.target.textContent === "Delete") {
+       functions.deleteCard(event.target.parentNode);
+   }
+});
