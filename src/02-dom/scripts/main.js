@@ -20,11 +20,11 @@ idPanelOnLeft.addEventListener("click", event => {
   }
   /********************************************************************************************************************* */
 
-  if (event.target.textContent === "Insert Before") {
+  if (event.target.textContent === "Add Before") {
     functions.addCardBefore(event.target.parentNode);
   }
 
-  if (event.target.textContent === "Insert After") {
+  if (event.target.textContent === "Add After") {
     functions.addCardAfter(event.target.parentNode);
   }
 

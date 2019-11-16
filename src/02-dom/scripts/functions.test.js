@@ -55,7 +55,7 @@ test("addCardButtons() appends buttons to cards", function() {
 
   functions.addCardButtons(newCard);
 
-  expect(newCard.children[1].firstChild.nodeValue).toEqual("Insert Before");
+  expect(newCard.children[1].firstChild.nodeValue).toEqual("Add Before");
 });
 
 test("addCardBefore() creates a new card before the current card", function() {
