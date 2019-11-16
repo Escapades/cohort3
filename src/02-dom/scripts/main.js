@@ -1,34 +1,34 @@
 // import functions from './functions.js';
-import * as functions from './functions.js';
+import * as functions from "./functions.js";
 
-containerId.addEventListener("click", (event) => {
+containerId.addEventListener("click", event => {
   console.log(event);
-//   console.log("We are here ...");
+  //   console.log("We are here ...");
   if (event.target.id === "idShow") {
-            alert(functions.showChildren(idList));
-        }
-    
-        if (event.target.id === "idAdd") {
-            functions.makeListElement();
-        } 
+    alert(functions.showChildren(idList));
+  }
+
+  if (event.target.id === "idAdd") {
+    functions.makeListElement();
+  }
 });
 
-idPanelOnLeft.addEventListener('click', (event) => {
-  console.log(event)
+idPanelOnLeft.addEventListener("click", event => {
+  console.log(event);
   if (event.target.id === "idAddCard") {
-      functions.appendCardElement();
+    functions.appendCardElement();
   }
-/********************************************************************************************************************* */
+  /********************************************************************************************************************* */
 
-   if (event.target.textContent === "Insert Before") {
-       functions.addCardBefore(event.target.parentNode);
-   }
+  if (event.target.textContent === "Insert Before") {
+    functions.addCardBefore(event.target.parentNode);
+  }
 
-   if (event.target.textContent === "Insert After") {
-       functions.addCardAfter(event.target.parentNode);
-   }
+  if (event.target.textContent === "Insert After") {
+    functions.addCardAfter(event.target.parentNode);
+  }
 
-   if (event.target.textContent === "Delete") {
-       functions.deleteCard(event.target.parentNode);
-   }
+  if (event.target.textContent === "Delete") {
+    functions.deleteCard(event.target.parentNode);
+  }
 });
