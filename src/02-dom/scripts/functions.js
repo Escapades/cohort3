@@ -31,11 +31,11 @@ export const appendCardElement = () => {
 export const addCardButtons = newCard => {
   newCard.appendChild(document.createElement("BR"));
   let insertBeforeButton = document.createElement("BUTTON");
-  insertBeforeButton.textContent = "Insert Before";
+  insertBeforeButton.textContent = "Add Before";
   newCard.appendChild(insertBeforeButton);
 
   let addAfterButton = document.createElement("BUTTON");
-  addAfterButton.textContent = "Insert After";
+  addAfterButton.textContent = "Add After";
   newCard.appendChild(addAfterButton);
 
   newCard.appendChild(document.createElement("BR"));
