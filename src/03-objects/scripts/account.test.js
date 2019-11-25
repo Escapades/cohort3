@@ -1,70 +1,74 @@
 import { Account, AccountController } from './account.js'
 
+// describe is a function in the jasmine testing framework that simply describes the suite of a test case
+// new is the design of Class Account
 
-describe('Account Testing', () => {
-    const checkingAccount = new Account("Checking Account", 100);
-
-
-    test('Account properties', () => {
-        expect(checkingAccount.name).toEqual("Checking Account");
-        expect(checkingAccount.currentBalance).toEqual(100);
-        console.log(checkingAccount.currentBalance);
-    });
-
-    test('deposit(value) adds value to currentBalance', () => {
-        checkingAccount.deposit(50);
-        expect(checkingAccount.currentBalance).toEqual(150);
-    });
-
-    test('withdraw(value) subtracts value from currentBalance', () => {
-        checkingAccount.withdraw(25);
-        expect(checkingAccount.currentBalance).toEqual(125);
-    });
-
-    test('balance() returns currentBalance', () => {
-        expect(checkingAccount.balance()).toEqual(125);
-    });
-});
+// describe('Account Testing', () => {
+//     const checkingAccount = new Account("Checking Account", 100);
 
 
-describe('Account Controller Testing', () => {
-    const banker = new AccountController();
+//     test('Account properties', () => {
+//         expect(checkingAccount.name).toEqual("Checking Account");
+//         expect(checkingAccount.currentBalance).toEqual(100);
+//         console.log(checkingAccount.currentBalance);
+//     });
+
+//     test('deposit(value) adds value to currentBalance', () => {
+//         checkingAccount.deposit(50);
+//         expect(checkingAccount.currentBalance).toEqual(150);
+//         console.log(checkingAccount.currentBalance);
+//     });
+
+//     test('withdraw(value) subtracts value from currentBalance', () => {
+//         checkingAccount.withdraw(25);
+//         expect(checkingAccount.currentBalance).toEqual(125);
+//         console.log(checkingAccount.currentBalance);
+//     });
+
+//     test('balance() returns currentBalance', () => {
+//         expect(checkingAccount.balance()).toEqual(125);
+//     });
+// });
 
 
-    test('createAccount() adds new account to accountList', () => {
-        banker.createAccount("Savings Account", 5);
-        expect(banker.accountArray[0].name).toEqual("Savings Account");
-    });
+// describe('Account Controller Testing', () => {
+//     const banker = new AccountController();
 
-    test('getAccounts() returns array of all accounts', () => {
-        banker.createAccount("Checking Account", 75);
-        expect(banker.getAccounts()).toEqual([{ "currentBalance": 5, "name": "Savings Account" }, { "currentBalance": 75, "name": "Checking Account" }]);
-    });
 
-    test('getAccount(name) returns account by name', () => {
-        expect(banker.getAccount("Checking Account")).toEqual({ "currentBalance": 75, "name": "Checking Account" });
-        expect(banker.getAccount("Non-existent Account")).toEqual(undefined);
-        expect(banker.getAccount("")).toEqual(undefined);
-    });
+//     test('createAccount() adds new account to accountList', () => {
+//         banker.createAccount("Savings Account", 5);
+//         expect(banker.accountArray[0].name).toEqual("Savings Account");
+//     });
 
-    test('removeAccount() removes account of that name', () => {
-        const accountCount = banker.getAccounts().length
-        banker.removeAccount("Savings Account");
-        expect(banker.getAccounts().length).toEqual(accountCount - 1);
-        expect(banker.getAccounts()).toEqual([{ "currentBalance": 75, "name": "Checking Account" }]);
-    });
+    // test('getAccounts() returns array of all accounts', () => {
+    //     banker.createAccount("Checking Account", 75);
+    //     expect(banker.getAccounts()).toEqual([{ "currentBalance": 5, "name": "Savings Account" }, { "currentBalance": 75, "name": "Checking Account" }]);
+    // });
 
-    test('totalAccounts() returns total balance of all accounts', () => {
-        banker.createAccount("Joint Account", 500);
-        banker.createAccount("Holiday Account", 25);
-        expect(banker.totalAccounts()).toEqual(600);
-    });
+//     test('getAccount(name) returns account by name', () => {
+//         expect(banker.getAccount("Checking Account")).toEqual({ "currentBalance": 75, "name": "Checking Account" });
+//         expect(banker.getAccount("Non-existent Account")).toEqual(undefined);
+//         expect(banker.getAccount("")).toEqual(undefined);
+//     });
 
-    test('mostValuableAccount() returns account with highest balance', () => {
-        expect(banker.mostValuableAccount()).toEqual({ "currentBalance": 500, "name": "Joint Account" });
-    });
+//     test('removeAccount() removes account of that name', () => {
+//         const accountCount = banker.getAccounts().length
+//         banker.removeAccount("Savings Account");
+//         expect(banker.getAccounts().length).toEqual(accountCount - 1);
+//         expect(banker.getAccounts()).toEqual([{ "currentBalance": 75, "name": "Checking Account" }]);
+//     });
 
-    test('leastValuableAccount() returns account with highest balance', () => {
-        expect(banker.leastValuableAccount()).toEqual({ "currentBalance": 25, "name": "Holiday Account" });
-    });
-});
+//     test('totalAccounts() returns total balance of all accounts', () => {
+//         banker.createAccount("Joint Account", 500);
+//         banker.createAccount("Holiday Account", 25);
+//         expect(banker.totalAccounts()).toEqual(600);
+//     });
+
+//     test('mostValuableAccount() returns account with highest balance', () => {
+//         expect(banker.mostValuableAccount()).toEqual({ "currentBalance": 500, "name": "Joint Account" });
+//     });
+
+//     test('leastValuableAccount() returns account with highest balance', () => {
+//         expect(banker.leastValuableAccount()).toEqual({ "currentBalance": 25, "name": "Holiday Account" });
+//     });
+// });
