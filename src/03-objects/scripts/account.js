@@ -20,6 +20,81 @@ export class Account {
     }
 }
 
+
+export const showChildren = listElement => {
+  let childrenArray = [];
+  let index = 0;
+  let x;
+  for (x of listElement.children) {
+    childrenArray[index] = x.textContent;
+    index++;
+  }
+  return childrenArray;
+};
+
+export const appendCardElement = () => {
+    let newCard = document.createElement("DIV");
+    
+    let accountName = document.createElement("p");
+    accountName.textContent = "Account Name: " + idNewAccountName.value;
+    newCard.appendChild(accountName);
+    let accountBalance = document.createElement("p");
+    accountBalance.textContent = "Balance: " + idInitialBalance.value;
+    newCard.appendChild(accountBalance);
+    idPanelOnLeft.appendChild(newCard); //display the item at idPanelOnLeft
+    newCard.className = "card";
+  
+    addCardButtons(newCard);
+    
+  };
+  
+  /**************************************************************************************************************************/
+//   let testname = document.createElement("p");
+//   testname.textContent = "hello" + idPanelLeft.childElementCount;
+//   newCard.appendChild(name); // suggested by Brendan
+// newCard is the pink panel of the card
+  
+  export const addCardButtons = newCard => {
+    newCard.appendChild(document.createElement("BR"));
+    let insertBeforeButton = document.createElement("BUTTON");
+    insertBeforeButton.textContent = "Deposit";
+    newCard.appendChild(insertBeforeButton);
+  
+    let addAfterButton = document.createElement("BUTTON");
+    addAfterButton.textContent = "WithDrawl";
+    newCard.appendChild(addAfterButton);
+  
+    newCard.appendChild(document.createElement("BR"));
+  
+    let deleteButton = document.createElement("BUTTON");
+    deleteButton.textContent = "Delete";
+    newCard.appendChild(deleteButton);
+  };
+  
+  export const addCardBefore = currentCard => {
+    let newCard = document.createElement("DIV");
+    newCard.textContent = "Card " + idPanelOnLeft.childElementCount; //faster than createTextNode
+    idPanelOnLeft.insertBefore(newCard, currentCard); //display the item at idPanelOnLeft
+    newCard.className = "card";
+  
+    addCardButtons(newCard);
+  };
+  
+  export const addCardAfter = currentCard => {
+  
+    let newCard = document.createElement("DIV");
+    newCard.textContent = "Card " + idPanelOnLeft.childElementCount; //faster than createTextNode
+    idPanelOnLeft.insertBefore(newCard, currentCard.nextSibling); //display the item at idPanelOnLeft
+    newCard.className = "card";
+  
+    addCardButtons(newCard);
+  };
+  
+  export const deleteCard = currentCard => {
+    currentCard.remove();
+  };
+  
+
 // const viewFunctions = {
 
 //     refreshAccountList: (accounts) => {
@@ -57,7 +132,7 @@ export class Account {
 //     }
 
 //     createAccount(name, startingBalance) {
-//         this.accountArray.push(new Account(name, Number(startingBalance)));
+//         this.accountArray.push(new Account(name, Num(startingBalance)));
 //     }
 
 //     getAccounts() {

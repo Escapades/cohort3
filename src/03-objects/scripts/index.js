@@ -1,5 +1,33 @@
-import { AccountController } from './account.js'
-import viewFunctions from './viewFunctions.js'
+// import { AccountController } from './account.js'
+import * as functions from "./account.js";
+
+idPanelOnLeft.addEventListener("click", event => {
+    console.log(event);
+   
+    /********************************************************************************************************************* */
+  
+    if (event.target.textContent === "Deposit") {
+      functions.addCardBefore(event.target.parentNode);
+    }
+  
+    if (event.target.textContent === "WithDrawl") {
+      functions.addCardAfter(event.target.parentNode);
+    }
+  
+    if (event.target.textContent === "Delete") {
+      functions.deleteCard(event.target.parentNode);
+    }
+  });
+  
+  idAddAccount.addEventListener("click",event => {
+    console.log(event);
+    functions.appendCardElement();
+    idNewAccountName.value = "";
+    idInitialBalance.value = "";
+  });
+
+
+// import viewFunctions from './viewFunctions.js'
 
 // const accountController = new AccountController();
 
