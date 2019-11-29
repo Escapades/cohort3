@@ -10,7 +10,7 @@ idPanelOnLeft.addEventListener("click", event => {
       functions.addCardBefore(event.target.parentNode);
     }
   
-    if (event.target.textContent === "WithDrawl") {
+    if (event.target.textContent === "WithDraw") {
       functions.addCardAfter(event.target.parentNode);
     }
   

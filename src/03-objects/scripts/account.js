@@ -61,7 +61,7 @@ export const appendCardElement = () => {
     newCard.appendChild(insertBeforeButton);
   
     let addAfterButton = document.createElement("BUTTON");
-    addAfterButton.textContent = "WithDrawl";
+    addAfterButton.textContent = "WithDraw";
     newCard.appendChild(addAfterButton);
   
     newCard.appendChild(document.createElement("BR"));
