@@ -2,75 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" type="text/css" href="./index.css" />
-  
-  <title>Bank Accounting Exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <title>Account Exercise</title>
 </head>
 
 <body>
-  <!-- Basic DOM Section -->
-  <div class="title-section">
-    <h1>CDN Bank</h1>
-  </div>
+    <div class="title-section">
+        <h1>CDN Bank</h1>
+    </div>
 
-  <!-- <div id="idGrid-Container"> -->
+    <div id="idGridContainer">
 
-    <!-- Account Summary Left Panel -->
+        <!-- Left - Account Summary Panel -->
+        <div id="idSummaryPanel">
+            <h2 class="subheading">Account Summary</h2>
 
-    <div id="idSummaryPanel">
-        <h2 class="subheading">Account Summary</h2>
+            <div class="form">
+                <h3>Create New Account</h3>
+                <label>Account Name:
+                    <input id="idNewAccountName" type="text">
+                </label>
+                <label>Initial Balance:
+                    <span class="input-symbol-dollar"><input class="amount-input-dollar" id="idInitialBalance"
+                            type="number" min="0" step="0.01"></span>
+                </label>
+                <br>
+                <button type='button' id="idAddAccount">Add Account</button><br><br>
+                <span id="idAccountMessage"></span>
+            </div>
 
-        <div class="form">
-            <h3>Create New Account</h3>
+            <div class="list-section">
+               <h3>Reports</h3>
+                <button type='button' id="idTotalAccounts">Total Balance</button>
+                <button type='button' id="idMostValuable">Most Valuable</button>
+                <button type='button' id="idLeastValuable">Least Valuable</button><br><br>
+                <span id="idReportMessage"></span> 
+            </div>
 
-<label>Account Name:
-    <input id="idNewAccountName" type="text">
-</label>
+            <div id="idReports" class="hidden">
+                <h3 class="subheading2">Account List</h3>
+                <ul id="idAccountList">
+                    <!-- <li>Account Template: $0 </li> -->
+                </ul>
+            </div>
+        </div>
 
+        <!-- Right - Account Card Panel -->
+        <div id="idCardPanel">
+            <!-- <h2>Accounts</h2> -->
 
-<label>Initial Balance:
-      <input class="amount-input-dollar" id="idInitialBalance" type="number" min="0" step="0.01"></br></br>
-</label>
+            <!-- Card Template -->
+             <div class="card" id="idPrimaryCard">
+                <h2>Accounts</h2><br>
+        
+            </div> 
+        </div>
+    </div>
 
-    <input id="idAddAccount" type="button" value="Add Account" /> 
-    <!-- <input id="idRemoveAccount" type="button" value="Remove Account" /> -->
-
-   <div class="listing">
-      <h3 class="subheading2">Account List</h3>
-      <ul id="idAccountList">
-        </ul>
- </div>
-
- <div id="idReports" class="hidden">
- <h3>Reports</h3>
-
- <input id="idTotalAccounts" type="button" value="Total Balance" />
- <input id="idMostValuable"  type="button" value="Most Valuable" />
- <input id="idLeastValuable" type="button" value="Least Valuable" /><br>
-</div>
-</div>
-
-<div id="idPanelRight">
-    <h3>Accounts</h3>
-    <!-- <h1>Working with Cards</h1> -->
-    <div class="grid-container">
-      <!-- Button Panel -->
-      <div class="panel left-panel" id="idPanelOnLeft">
-        <!-- <input id="idAddCard" class="clColor3" type="button" value="Add Card" /> -->
-        <!-- <div class="card">
-          Card 1<br /><br />
-          <input id="idInsertBefore" class="clColor4" type="button" value="Add Before" />
-          <input id="idAddAfter" class="clColor5" type="button" value="Add After" /><br /> 
-          <input id="idDelete" class="clColor6" type="button" value="Delete" />
-    
-
-  </div> -->
-</div>
-
-  <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>
