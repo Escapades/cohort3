@@ -11,17 +11,18 @@ body {
 
 #idGridContainer {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: minmax(375px, 500px) auto;
 }
 
 #idSummaryPanel {
-    background-color: #7D99FE;
+    background-color: rgb(241, 254, 125);
     display: grid;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 4fr;
     gap: 15px 15px;
     text-align: left;
-    padding: 10px 50px;
+    padding: 10px 0px 10px 30px;
+    height: 750px;
 }
 
 .hidden {
@@ -37,82 +38,59 @@ body {
 }
 
 .form > * > *{
-    margin: 0px 10px 0px 0px;
-}
-
-#idAccountList {
-    list-style-type: none;
-   
-}
-
-.list-section {
-grid-row-start: span 2;
-}
-
-#idNewAccountName {
+    margin: 5px 10px 0px 0px;
     width: 100px;
 }
 
-#idAccountMessage {
+#idCreateCityMessage {
     color: rgb(214, 6, 6);
 }
 
+#idFetchError{
+    color: rgb(214, 6, 6);
+}
 
-#idCardPanel {
-    background-color: #DDE4FF;
-    height: 700px;
+#idMapPanel {
+    height: 750px;
     text-align: center;
     padding: 10px;
 }
 
-.card {
-    background-color: #FFE09B;
-    margin: 30px;
-    padding: 20px;
-    border-radius: 5px;
-}
-.card > * {
-    margin: 15px 3px 5px 3px;
+.map{
+    /* background-image: url('./images/Alberta.png'); created from GOA opendata */
+    opacity: 0.75;
+    width: 330px;
+    height: 550px;
+    margin: auto;
 }
 
-.delete-button{
-    display: block;
-    float:right;
-    position:relative;
-    top:-110px;
-    right: -15px;
-    height: 20px;
-    width: 20px;
-    padding: 0;
-    font-weight: bolder;
-    font-size: 1em;
+.city-point:hover {
+    cursor: pointer;
 }
 
-/* --- To remove arrow buttons on number input--- */
-.amount-input-dollar::-webkit-outer-spin-button,
-.amount-input-dollar::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-.amount-input-dollar[type=number] {
-    -moz-appearance:textfield; /* For Firefox */
-    width: 5em;
+.city-selected {
+    stroke: rgb(0, 128, 255);
+    stroke-width: 3;
 }
 
-/* --- Add dollar sign to number field --- */
-.input-symbol-dollar {
-    position: relative;
+#idSelectedCity{
+    margin: 0px;
 }
-.input-symbol-dollar input {
-    padding-left:13px;
-    width: 7em;
+
+#idCityTools  * {
+    margin: 2px;
 }
-.input-symbol-dollar:before {
-    position: absolute;
-    top: 1px;
-    content:"$";
-    left: 5px;
-    color: black;
+
+
+#idPopChange {
+    width: 100px;
 }
-© 2019 GitHub, Inc.
+
+#idDelete {
+    border-color: red;
+    border-width: medium;
+}
+
+#idCityMessage{
+    color: rgb(0, 128, 255);
+}
