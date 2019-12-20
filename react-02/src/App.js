@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './images/logo.svg';
-import communityIcon from './images/airport.svg';
+import communityIcon from './images/logo.svg';
 import tictactoeIcon from './images/slip.svg';
 import bankIcon from './images/globe.svg';
 import linkIcon from './images/linux.svg';
