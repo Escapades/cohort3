@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import logo from './images/logo.svg';
-import communityIcon from './images/logo.svg';
-import tictactoeIcon from './images/slip.svg';
-import bankIcon from './images/globe.svg';
-import linkIcon from './images/linux.svg';
+import communityIcon from './images/city.svg';
+import tictactoeIcon from './images/tic-tac-toe.svg';
+import bankIcon from './images/bank.svg';
+import linkIcon from './images/link.svg';
 
 import Icon from './components/Icon';
 import Starter from './components/starter/Starter';
-// import Game from './components/tictactoe/Game';
-// import AccountsApp from './components/accounts/AccountsApp';
-// import CitiesApp from './components/cities/CitiesApp';
+import Game from './components/tictactoe/Game';
+import AccountsApp from './components/accounts/AccountsApp';
+import CitiesApp from './components/cities/CitiesApp';
 // import LinkedListApp from './components/linked-list/LinkedListApp';
 
 
@@ -41,9 +41,9 @@ class App extends Component {
 
   showPage = () => {
     if (this.state.selected === logo) return <Starter logo={logo}/>;
-    // if (this.state.selected === tictactoeIcon) return <Game />;
-    // if (this.state.selected === bankIcon) return <AccountsApp />;
-    // if (this.state.selected === communityIcon) return <CitiesApp />;
+    if (this.state.selected === tictactoeIcon) return <Game />;
+    if (this.state.selected === bankIcon) return <AccountsApp />;
+    if (this.state.selected === communityIcon) return <CitiesApp />;
     // if (this.state.selected === linkIcon) return <LinkedListApp />;
 
   }
