@@ -3,7 +3,7 @@ export class Account {
         this.name = name;
         this.currentBalance = startingBalance;
     }
-  
+//   
     deposit(value) {
         this.currentBalance += Math.round(Number(value) * 100) / 100;
     }
@@ -14,7 +14,7 @@ export class Account {
   
   }
   
-  
+  //
   export class AccountController {
     constructor() {
         this.accountArray = [];
