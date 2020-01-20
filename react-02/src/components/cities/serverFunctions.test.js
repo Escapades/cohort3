@@ -1,6 +1,6 @@
 import { Community } from './cities.js'
 import serverFunctions from './serverFunctions.js'
-
+//
 describe('Class methods update data on server using API CRUD functionality', () => {
     global.fetch = require('node-fetch');
     const url = 'http://localhost:5000/';
