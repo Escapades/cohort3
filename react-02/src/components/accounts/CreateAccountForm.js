@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// 
+
 class CreateAccountForm extends Component {
   constructor() {
     super();
@@ -34,7 +34,7 @@ class CreateAccountForm extends Component {
               name="nameInput"
               type="text"
               value={this.state.nameInput}
-              onChange={this.handleInputChange} />
+              onChange={this.handleInputChange} /> <br />
           </label>
           <label>Initial Balance:
             <span className="input-symbol-dollar">
@@ -42,9 +42,10 @@ class CreateAccountForm extends Component {
                 name="startingBalanceInput"
                 type="number"
                 value={this.state.startingBalanceInput}
-                onChange={this.handleInputChange}
+                onChange={this.handleInputChange} 
                 min="0"
                 step="0.01" />
+                <br />
             </span>
           </label>
           <button>Add Account</button><br /><br />

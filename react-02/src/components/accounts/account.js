@@ -14,7 +14,7 @@ export class Account {
   
   }
   
-  //
+  
   export class AccountController {
     constructor() {
         this.accountArray = [];

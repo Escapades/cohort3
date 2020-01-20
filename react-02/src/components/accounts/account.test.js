@@ -48,7 +48,7 @@ describe('Account Controller Testing', () => {
         expect(banker.accountArray).toEqual([{ "currentBalance": 75, "name": "Checking Account" }]);
     });
 
-    test('totalAccounts() returns total balance of all accounts', () => {
+    test('totalAccounts() returns  of all accounts', () => {
         const banker = new AccountController();
         banker.createAccount("Joint Account", 500);
         banker.createAccount("Holiday Account", 25);

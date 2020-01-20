@@ -3,7 +3,6 @@ import './AccountsApp.css';
 import CreateAccountForm from './CreateAccountForm';
 import AccountCard from './AccountCard';
 import { AccountController } from './account.js'
-// 
 
 class AccountsApp extends Component {
   constructor() {
@@ -44,7 +43,7 @@ class AccountsApp extends Component {
     });
 
     if (this.accountController.accountArray.length > 1) {
-      document.getElementById("idReport").classList.remove("view");
+      document.getElementById("idReport").classList.remove("hidden");
 
       const totalBalanceUpdate = this.accountController.totalAccounts();
       const mostValuableUpdate = this.accountController.mostValuableAccount().name;
@@ -72,9 +71,9 @@ class AccountsApp extends Component {
 
   render() {
     return (
-      <div id="idGridContainer">
-        <div id="idSummaryPanel">
-          <h2 className="subheading">Account Summary</h2>
+      <div id="idGridContainer1">
+        <div id="idSummaryPanel1">
+          <h2 className="subheading">CDN Bank</h2>
 
           <CreateAccountForm onSubmit={this.addAccount} message={this.state.message} />
 
