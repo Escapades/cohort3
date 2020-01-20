@@ -25,7 +25,7 @@ class CitiesApp extends Component {
     if (errorMessage) {
       this.showFetchMessage(errorMessage);
     } else if (this.province.cityList.length < 1) {
-      this.showFetchMessage("Warning: Server database is empty.")
+      this.showFetchMessage(" The database is empty: Create a New City.")
     } else {
       this.calcReport()
     }
@@ -80,7 +80,7 @@ class CitiesApp extends Component {
     });
 
     if (this.province.cityList.length > 1) {
-      document.getElementById("idCityReport").classList.remove("hidden");
+      document.getElementById("idCityReport").classList.remove("view");
 
       const mostNorth = this.province.getMostNorthern();
       const mostSouth = this.province.getMostSouthern();
@@ -95,7 +95,7 @@ class CitiesApp extends Component {
         mostSouthern: mostSouthernUpdate
       });
     } else {
-      document.getElementById("idCityReport").classList.add("hidden");
+      document.getElementById("idCityReport").classList.add("view");
     }
   }
 
@@ -138,11 +138,11 @@ class CitiesApp extends Component {
     return (
       <div id="idGridContainer">
         <div id="idSummaryPanel">
-          <h2 className="subheading">Community Manager</h2>
+          <h2 className="subheading">Community and City</h2>
 
           <CreateCityForm onSubmit={this.addCity} message={this.state.formMessage} /><br />
 
-          <div id="idCityReport" className="hidden">
+          <div id="idCityReport" className="view">
             <h3>Report</h3>
             <span>Total Population: </span><span>{this.state.totalPopulation}</span><br />
             <span>Most Northern: </span><span>{this.state.mostNorthern}</span><br />
@@ -151,11 +151,11 @@ class CitiesApp extends Component {
         </div>
 
         <div id="idMapPanel">
-          <h2 className="subheading2">Alberta Map</h2>
+          <h2 className="subheading2">Map of Alberta</h2>
 
-          <div>
-            <h3>City Tools</h3>
-            <h4 id="idSelectedCity">{this.state.selectedCity.name || "Select City"}</h4>
+          <div> 
+            <h3>Additional Information City</h3>
+            <h4 id="idSelectedCity">{this.state.selectedCity.name || " ' Click ' on the yellow dot of a given city ..."}</h4>
 
             {this.renderTools()}
 

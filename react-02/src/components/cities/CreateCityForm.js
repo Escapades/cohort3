@@ -33,7 +33,7 @@ class CreateCityForm extends Component {
       <div className="form">
         <h3>Create New City</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>City Name:
+          <label>Name of City:
             <input
               name="nameInput"
               type="text"
@@ -64,6 +64,14 @@ class CreateCityForm extends Component {
           </label><br/>
           <button>Add City</button><br /><br />
           <p id="idCreateCityMessage">{this.props.message}</p>
+
+          {/* <button>Total Population</button><br /><br />
+
+          <button>Most Northern</button><br /><br />
+
+          <button>Most Southern</button><br /><br />
+ */}
+
         </form>
       </div>
     );
